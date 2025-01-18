@@ -1,0 +1,128 @@
+.container {
+  position: relative;
+  overflow: hidden;
+  touch-action: pan-y;
+  margin-bottom: 1rem;
+  border-radius: 12px;
+  background: var(--bg-tertiary);
+  box-shadow: 0 2px 4px var(--shadow-color);
+  transition: transform 0.2s ease;
+}
+
+.content {
+  position: relative;
+  transition: transform 0.2s ease;
+  z-index: 2;
+}
+
+.gmHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 1rem;
+  min-height: 100px;
+}
+
+.gmHeader p {
+  margin: 0;
+  flex: 1;
+}
+
+.trashButton {
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  color: var(--text-secondary);
+  cursor: pointer;
+  opacity: 0.6;
+  transition: all 0.2s ease;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.trashButton:hover {
+  opacity: 1;
+  color: var(--error-text);
+  background: var(--error-bg);
+}
+
+.deleteAction {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 150px;
+  background: var(--error-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: var(--error-text);
+  font-weight: 500;
+  z-index: 1;
+  border-radius: 0 12px 12px 0;
+  transition: background-color 0.2s ease;
+  cursor: pointer;
+}
+
+.deleteAction:hover {
+  background: #4f1919;
+}
+
+.deleteText {
+  font-size: 0.9rem;
+}
+
+.deleting {
+  animation: slideOut 0.3s ease forwards;
+}
+
+@keyframes slideOut {
+  to {
+    height: 0;
+    opacity: 0;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.actionButtons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100%;
+  padding: 0.5rem 0;
+  gap: 0.5rem;
+}
+
+.editButton, .trashButton {
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  color: var(--text-secondary);
+  cursor: pointer;
+  opacity: 0.6;
+  transition: all 0.2s ease;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+}
+
+.editButton:hover {
+  opacity: 1;
+  color: var(--blue-primary);
+  background: var(--blue-bg);
+}
+
+.trashButton:hover {
+  opacity: 1;
+  color: var(--error-text);
+  background: var(--error-bg);
+} 
