@@ -2,7 +2,7 @@
 
 A modern message scheduling application for Farcaster, designed to help you plan and schedule your messages with ease.
 
-![Pod Planner Logo](/src/frontend/public/images/The%20Pod%20Logo.png)
+<img src="/src/frontend/public/images/The%20Pod%20Logo.png" width="200" alt="Pod Planner Logo">
 
 ## Features
 
