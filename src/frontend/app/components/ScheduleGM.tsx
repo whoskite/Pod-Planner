@@ -5,13 +5,14 @@ import styles from './ScheduleGM.module.css';
 import { ScheduledGM } from '../../../types';
 
 interface ScheduleGMProps {
-  onSchedule: (success: boolean, message: string) => void;
+  onSchedule: (success: boolean, responseMessage: string) => void;
   defaultTimezone: string;
   editGM?: ScheduledGM | null;
+  initialMessage?: string;
 }
 
-export default function ScheduleGM({ onSchedule, defaultTimezone, editGM }: ScheduleGMProps) {
-  const [message, setMessage] = useState(editGM?.message || '');
+export default function ScheduleGM({ onSchedule, defaultTimezone, editGM, initialMessage }: ScheduleGMProps) {
+  const [message, setMessage] = useState(editGM?.message || initialMessage || '');
   const [scheduleTime, setScheduleTime] = useState(() => {
     if (editGM) {
       const date = new Date(editGM.scheduleTime);
